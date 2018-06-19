@@ -7,6 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         
+        <TreeView Grid.Column="0" Grid.Row="0" Name="treeView">
+            <TreeViewItem Header="Зима">test month</TreeViewItem>
+            <TreeViewItem Header="Весна">test month</TreeViewItem>
+            <TreeViewItem Header="Лето">test month</TreeViewItem>
+            <TreeViewItem Header="Осень">test month</TreeViewItem>
+        </TreeView>
+
+        <ListView Grid.Column="1" Grid.Row="0">
+            <!--<ListView.View>-->
+                <!--<GridView>-->
+                    <!--<GridViewColumn>-->
+                        <Calendar DisplayMode="Month" Name="calendarListView"/>
+                    <!--</GridViewColumn>-->
+                <!--</GridView>-->
+            <!--</ListView.View>-->
+        </ListView>
+
+        <Calendar DisplayMode="Month" Grid.Column="0" Grid.Row="1"/>
     </Grid>
 </Window>
